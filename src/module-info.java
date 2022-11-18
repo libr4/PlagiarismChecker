@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author mecha
+ *
+ */
+module PlagiarismChecker {
+}
