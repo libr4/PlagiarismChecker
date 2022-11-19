@@ -1,6 +1,6 @@
 package tarefa;
 
-import java.util.Map;
+import java.util.*;
 
 public class Frase {
 	
@@ -12,7 +12,6 @@ public class Frase {
 		this.frase = f;
 		this.listaPalavras = splitFraseEmPalavras(f); 
 		this.ocorrenciaPalavras = contaOcorrPalavras(listaPalavras);
-		
 	}
 	
 	String[] splitFraseEmPalavras(String frase) {
@@ -21,9 +20,9 @@ public class Frase {
 		return palavras;
 	}
 	
-	
 	Map<String, Integer> contaOcorrPalavras(String[] palavras) {
 		//conta a ocorrencia das palavras no paragrafo
+		Map<String, Integer> ocorrenciaPalavras = new HashMap<String, Integer>();
 		for(String palavra : palavras) {
 			ocorrenciaPalavras.put(
 					palavra, 

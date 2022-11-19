@@ -2,20 +2,28 @@ package tarefa;
 
 import java.io.*;
 import java.util.*;
-import tarefa.Frase;
-import tarefa.Paragrafo;
+import tarefa.*;
 
 public class Tarefa {
 	
 	public String texto;
 	public String directory;
-	public Tarefa(String path) throws FileNotFoundException {
-		this.directory = path;
-		this.texto = converterEmString(directory);
-		
+	private String aluno;
+	private String nomeTarefa;
+	public List<Frase> frases;
+	public List<Paragrafo> paragrafos;
+	
+	public Tarefa(String nomeAluno, String nomeTarefa) throws FileNotFoundException {
+		this.aluno = nomeAluno;
+		this.nomeTarefa = nomeTarefa;
+		this.directory = ("Exemplos/" + nomeAluno + "/" + nomeTarefa + ".txt");
+		this.texto = this.converterEmString(directory);
+		this.frases = this.getFrases(texto);
+		this.paragrafos = this.getParagrafos(texto);
 	}
 	
 	String converterEmString(String directory) throws FileNotFoundException {
+		
 		String txt = "";
 		File file = new File(directory);
 		Scanner scan = new Scanner(file);
@@ -26,6 +34,7 @@ public class Tarefa {
 		}
 		
 		scan.close();
+		System.out.println(txt);
 		
 		return txt;
 	}
@@ -44,7 +53,7 @@ public class Tarefa {
 	}
 	
 	List<Paragrafo> getParagrafos(String texto) {
-		//partindo do pressuposto de que um paragrafo
+		//partindo do simples pressuposto de que um paragrafo
 		//termina com um '\n'
 		String[] parags = texto.split("\\n");
 		List<Paragrafo> paragrafos = new ArrayList<Paragrafo>();
@@ -52,6 +61,7 @@ public class Tarefa {
 		for(String parag : parags) {
 			paragrafos.add(new Paragrafo(parag));
 		}
+		
 		return paragrafos;
 	}
 
