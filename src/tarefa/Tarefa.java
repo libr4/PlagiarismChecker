@@ -8,7 +8,7 @@ public class Tarefa {
 	
 	public String texto;
 	public String directory;
-	private String aluno;
+	public String aluno;
 	private String nomeTarefa;
 	public List<Frase> frases;
 	public List<Paragrafo> paragrafos;
@@ -16,7 +16,7 @@ public class Tarefa {
 	public Tarefa(String nomeAluno, String nomeTarefa) throws FileNotFoundException {
 		this.aluno = nomeAluno;
 		this.nomeTarefa = nomeTarefa;
-		this.directory = ("Exemplos/" + nomeAluno + "/" + nomeTarefa + ".txt");
+		this.directory = ("Exemplos/" + nomeAluno + "/" + nomeTarefa);
 		this.texto = this.converterEmString(directory);
 		this.frases = this.getFrases(texto);
 		this.paragrafos = this.getParagrafos(texto);
@@ -34,7 +34,7 @@ public class Tarefa {
 		}
 		
 		scan.close();
-		System.out.println(txt);
+		//System.out.println(txt);
 		
 		return txt;
 	}

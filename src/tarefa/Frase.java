@@ -10,11 +10,11 @@ public class Frase {
 	
 	public Frase(String f) {
 		this.frase = f;
-		this.listaPalavras = splitFraseEmPalavras(f); 
+		this.listaPalavras = splitTextoEmPalavras(f); 
 		this.ocorrenciaPalavras = contaOcorrPalavras(listaPalavras);
 	}
 	
-	String[] splitFraseEmPalavras(String frase) {
+	String[] splitTextoEmPalavras(String frase) {
 		//faz um split a partir dos espaços
 		String[] palavras = frase.split("\\s");
 		return palavras;

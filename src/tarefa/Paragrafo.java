@@ -4,14 +4,16 @@ import java.util.*;
 
 public class Paragrafo implements Granularidade {
 	
-	private Map<String, Integer> ocorrenciaPalavras;
+	public Map<String, Integer> ocorrenciaPalavras;
 	private String paragrafo;
 	private String[] listaPalavras;
+	public int totalDePalavras;
 	
 	public Paragrafo(String p) {
 		this.paragrafo = p;
 		this.listaPalavras = splitTextoEmPalavras(paragrafo); 
 		this.ocorrenciaPalavras = contaOcorrPalavras(listaPalavras);
+		this.totalDePalavras = listaPalavras.length;
 		
 	}
 	
@@ -30,14 +32,6 @@ public class Paragrafo implements Granularidade {
 					palavra.toLowerCase(), 
 					1 + (!(ocorrenciaPalavras.get(palavra) == null) ? ocorrenciaPalavras.get(palavra) : 0
 					));
-		}
-		
-		//codigo abaixo eh apenas para teste/debug, mostra a contagem de ocorrencias
-		//por paragrafo
-		for (String name: ocorrenciaPalavras.keySet()) {
-		    String key = name.toString();
-		    String value = ocorrenciaPalavras.get(name).toString();
-		    System.out.println(key + " " + value);
 		}
 		return ocorrenciaPalavras;
 	}
