@@ -43,11 +43,11 @@ public class VerificadorPlagio {
 					palavrasSemelhantes += Math.min(paragAtualSub.get(palavra), ocorrenciaPalavradoParagArq);
 					if (ocorrenciaPalavradoParagArq > 0) 
 						qtdPalavrasComparadas += Math.max(paragAtualSub.get(palavra), (paragAtualArq.get(palavra) == null ? 0 : paragAtualArq.get(palavra)));
-						System.out.println("ocorr" + ocorrenciaPalavradoParagArq);
+					
 				}
 			}
 
-			System.out.println("qtd" + qtdPalavrasComparadas);
+			
 			double taxaSemelhanca = (double)palavrasSemelhantes/qtdPalavrasComparadas;
 			relat.put("Paragrafo " + (i + 1) + " : ", taxaSemelhanca);
 		}
