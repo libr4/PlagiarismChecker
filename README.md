@@ -25,8 +25,8 @@ Para lidar com uma das principais dificuldades deste modelo - o desafio de se ma
   Discussão sobre o modelo de classes e definição da primeira versão.
 ### Reunião 2 - 9/11
 Definição de responsabilidades entre os integrantes. (Taks / responsável/ prazo)
-- [ ] Gerenciador do projeto - Matheus - 12/11/2022
-- [ ] Concluir User stories/Requisitos - Benjamin - 12/11/2022
+- [x] Gerenciador do projeto - Matheus - 12/11/2022
+- [x] Concluir User stories/Requisitos - Benjamin - 12/11/2022
 - [ ] Finalizar modelo de classes - Yuri - 12/11/2022
 - [x] Plano de desenvolvimento - Iasmim - 12/11/2022
 - [ ] Projeto em Execução v1 - Jonas, Laion, Brian e os outros ajudam conforme finalize a atividade. - 21/11/2022
