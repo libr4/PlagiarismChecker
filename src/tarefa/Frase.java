@@ -28,6 +28,7 @@ public class Frase {
 					palavra, 
 					1 + (ocorrenciaPalavras.get(palavra) == null ? 0 : ocorrenciaPalavras.get(palavra)
 					));
+			assert(ocorrenciaPalavras.get(palavra) != null): palavra + "is null";
 		}
 		return ocorrenciaPalavras;
 	}

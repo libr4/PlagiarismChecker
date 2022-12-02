@@ -9,6 +9,7 @@ import client.Test;
 public class Interface {	
 	public static void main(String[] args) {	
 			
+				assert(1 == 5):"tewwwwwwwwwwwwst";
 				Scanner scan = new Scanner(System.in);
 				System.out.println("Nome do aluno: ");
 				String nomeAluno = scan.nextLine();
@@ -25,9 +26,11 @@ public class Interface {
 					//listaAlunos eh uma lista com o nome dos subdiretorios de ./Exemplos/
 					String[] listaAlunos = new File("Exemplos/").list();
 					List<Tarefa> outrasSubmissoes = new ArrayList<Tarefa>();
+					
 					for(String aluno : listaAlunos) {
 						outrasSubmissoes.add(new Tarefa(aluno, nomeTarefa + ".txt"));
 					}
+
 					//O CODIGO ABAIXO DEVE SER TRANSFERIDO PRA OUTRA CLASSE
 					//PARA RESPEITAR O PRINCIPIO DA SINGLE RESPONSABILITY
 					//ALEM DISSO, ELE NAO FUNCIONA, ESTA PRODUZINDO NULLPOINTEREXCEPTION
@@ -36,6 +39,7 @@ public class Interface {
 						Map<String, Double> relatorio = verificador.comparaParagrafos(tarefa, t);
 						if (t.aluno != nomeAluno) {
 							System.out.println("Similaridade com " + t.aluno);
+
 							for (String name: relatorio.keySet()) {
 								String key = name.toString();
 								String value = relatorio.get(name).toString();

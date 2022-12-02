@@ -13,10 +13,10 @@ public class Tarefa {
 	public List<Frase> frases;
 	public List<Paragrafo> paragrafos;
 	
-	public Tarefa(String nomeAluno, String nomeTarefa) throws FileNotFoundException {
-		this.aluno = nomeAluno;
+	public Tarefa(String idAluno, String nomeTarefa) throws FileNotFoundException {
+		this.aluno = idAluno;
 		this.nomeTarefa = nomeTarefa;
-		this.directory = ("Exemplos/" + nomeAluno + "/" + nomeTarefa);
+		this.directory = ("Exemplos/" + idAluno + "/" + nomeTarefa);
 		this.texto = this.converterEmString(directory);
 		this.frases = this.getFrases(texto);
 		this.paragrafos = this.getParagrafos(texto);
