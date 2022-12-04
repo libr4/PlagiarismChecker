@@ -7,7 +7,7 @@ import tarefa.*;
 public class Tarefa {
 	
 	public String texto;
-	public String directory;
+	private String diretorio;
 	public String aluno;
 	private String nomeTarefa;
 	public List<Frase> frases;
@@ -16,8 +16,8 @@ public class Tarefa {
 	public Tarefa(String idAluno, String nomeTarefa) throws FileNotFoundException {
 		this.aluno = idAluno;
 		this.nomeTarefa = nomeTarefa;
-		this.directory = ("Exemplos/" + idAluno + "/" + nomeTarefa);
-		this.texto = this.converterEmString(directory);
+		this.diretorio = ("Exemplos/" + idAluno + "/" + nomeTarefa);
+		this.texto = this.converterEmString(diretorio);
 		this.frases = this.getFrases(texto);
 		this.paragrafos = this.getParagrafos(texto);
 	}
@@ -63,6 +63,10 @@ public class Tarefa {
 		}
 		
 		return paragrafos;
+	}
+	
+	public String getDiretorio() {
+		return this.diretorio;
 	}
 
 }
