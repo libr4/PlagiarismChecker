@@ -1,3 +1,5 @@
+A DRIVER CLASS É A INTERFACE.JAVA, PORTANTO, PARA RODAR O PROGRAMA, DEVE-SE RODÁ-LA.
+
 # Plagiarism Checker - Projeto Final
 # Equipe 5
 * Brian Lucas Dias Santos Machado

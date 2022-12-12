@@ -12,7 +12,7 @@ public class VerificadorPlagioParagrafos implements VerificadorPlagio {
 	String relatorio;
 	
 	public VerificadorPlagioParagrafos() {
-		//this.relatorioFrases =  
+		  
 	}
 	
 	public double comparaParagrafos(Tarefa submetida, Tarefa arquivada) {
@@ -70,9 +70,7 @@ public class VerificadorPlagioParagrafos implements VerificadorPlagio {
 	
 			DecimalFormat df = new DecimalFormat();
 			df.setMaximumFractionDigits(2);
-			System.out.println(df.format(relatorio) + "%");
-			//System.out.printf("%.2f\\%", relatorio * 100);
-			
+			System.out.println(df.format(relatorio) + "%");	
 		}
 		
 	}
