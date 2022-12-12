@@ -81,7 +81,7 @@ Disponível em: <a href="https://app.diagrams.net/#G1c6baV5upgwpJMoCh_v7Xl7_J3I2
 <a href="https://trello.com/b/PtgWK2A0/projeto-eng-soft-equipe-5">Gerenciador do Projeto</a>
 
 # Repositório no Github
-<a href="https://github.com/IasmimMarinho/Equipe-5---Plagiarism-Checker-for-Assignments-in-Computer-Science-Courses">Repositório</a>
+<a href="https://github.com/libr4/PlagiarismChecker">Repositório</a>
 
 # Referências
 https://docs.google.com/document/d/1od7NcSIeTqVu0jj97FUuI1KQCgNzYCpZp2cXyWQ8SPg/edit
