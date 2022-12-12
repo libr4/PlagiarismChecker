@@ -4,12 +4,16 @@ public class Aluno extends User {
 	
 	private String id;
 	private String curso;
-	public void Aluno(String id) {
-		this.id = id;
+	public Aluno(String id, String nome) {
+		super(id, nome);
 	}
 	
-	public String get_id() {
+	public String getId() {
 		return this.id;
+	}
+	
+	public String getCurso() {
+		return this.curso;
 	}
 	//private boolean submeter() {
 		

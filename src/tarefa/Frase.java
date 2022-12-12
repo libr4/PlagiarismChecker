@@ -2,34 +2,19 @@ package tarefa;
 
 import java.util.*;
 
-public class Frase {
+public class Frase extends Texto {
 	
-	public String frase;
-	private Map<String, Integer> ocorrenciaPalavras;
+	public Map<String, Integer> ocorrenciaPalavras;
+	private String frase;
 	private String[] listaPalavras;
-	
+	public int totalDePalavras;
+	public int totalDePalavrasComparaveis;
 	public Frase(String f) {
+		super(f);
 		this.frase = f;
-		this.listaPalavras = splitTextoEmPalavras(f); 
+		this.listaPalavras = splitTextoEmPalavras(frase); 
 		this.ocorrenciaPalavras = contaOcorrPalavras(listaPalavras);
-	}
-	
-	String[] splitTextoEmPalavras(String frase) {
-		//faz um split a partir dos espaços
-		String[] palavras = frase.split("\\s");
-		return palavras;
-	}
-	
-	Map<String, Integer> contaOcorrPalavras(String[] palavras) {
-		//conta a ocorrencia das palavras no paragrafo
-		Map<String, Integer> ocorrenciaPalavras = new HashMap<String, Integer>();
-		for(String palavra : palavras) {
-			ocorrenciaPalavras.put(
-					palavra, 
-					1 + (ocorrenciaPalavras.get(palavra) == null ? 0 : ocorrenciaPalavras.get(palavra)
-					));
-			assert(ocorrenciaPalavras.get(palavra) != null): palavra + "is null";
-		}
-		return ocorrenciaPalavras;
+		this.totalDePalavras = listaPalavras.length;
+		this.totalDePalavrasComparaveis = this.totalPalavrasComparaveis(this.listaPalavras).size();
 	}
 }

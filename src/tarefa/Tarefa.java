@@ -8,20 +8,31 @@ public class Tarefa {
 	
 	public String texto;
 	private String diretorio;
-	public String aluno;
+	private String aluno;
 	private String nomeTarefa;
+	private String arquivo;
+	public List<String> palavrasComparaveis;
 	public List<Frase> frases;
 	public List<Paragrafo> paragrafos;
 	
 	public Tarefa(String idAluno, String nomeTarefa) throws FileNotFoundException {
 		this.aluno = idAluno;
 		this.nomeTarefa = nomeTarefa;
-		this.diretorio = ("Exemplos/" + idAluno + "/" + nomeTarefa);
+		this.arquivo = nomeTarefa + ".txt";
+		this.diretorio = ("Atividades/" + idAluno + "/" + this.arquivo);
+		
 		this.texto = this.converterEmString(diretorio);
 		this.frases = this.getFrases(texto);
 		this.paragrafos = this.getParagrafos(texto);
 	}
 	
+	public String getAlunoId() {
+		return this.aluno;
+	}
+	
+	public String getNomeTarefa() {
+		return this.nomeTarefa;
+	}
 	String converterEmString(String directory) throws FileNotFoundException {
 		
 		String txt = "";
